@@ -11,7 +11,7 @@ batch interact with multiple git repositories
 
 - `report` prints necessary info about your working dir: name, last fetch, branch name, tag, remote tag, difference
   between HEAD and upstream, dirty status
-- `fetch` concurrently downloads fresh remote
+- `fetch` concurrently downloads fresh remote.
 
 ## configuration
 
