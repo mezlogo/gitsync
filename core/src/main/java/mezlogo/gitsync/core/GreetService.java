@@ -1,4 +1,4 @@
-package mezlogo.template_cli.api;
+package mezlogo.gitsync.core;
 
 public class GreetService {
     public String greet(String name) {

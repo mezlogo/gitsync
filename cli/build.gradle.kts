@@ -14,14 +14,19 @@ tasks.withType(JavaCompile::class.java) {
 }
 
 application {
-    mainClass.set("mezlogo.template_cli.cli.MainCommand")
-    applicationName = "mycliapp"
+    mainClass.set("mezlogo.gitsync.cli.MainCommand")
+    applicationName = "gitsync"
 }
 
 val generateAutocomplete by tasks.registering(JavaExec::class) {
     val completionsDir = layout.buildDirectory.dir("completions")
     outputs.dir(completionsDir)
-    args = listOf("-f", "-o", completionsDir.get().file("mycliapp_completion").asFile.absolutePath, "mezlogo.template_cli.cli.MainCommand")
+    args = listOf(
+        "-f",
+        "-o",
+        completionsDir.get().file("gitsync_completion").asFile.absolutePath,
+        "mezlogo.gitsync.cli.MainCommand"
+    )
     mainClass.set("picocli.AutoComplete")
     classpath = sourceSets.main.get().runtimeClasspath
 }
@@ -44,8 +49,8 @@ graalvmNative {
     toolchainDetection.set(false)
     binaries {
         named("main") {
-            imageName.set("mycliapp")
-            mainClass.set("mezlogo.template_cli.cli.MainCommand")
+            imageName.set("gitsync")
+            mainClass.set("mezlogo.gitsync.cli.MainCommand")
             debug.set(true)
             sharedLibrary.set(false)
             verbose.set(true)

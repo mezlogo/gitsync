@@ -1,6 +1,6 @@
-package mezlogo.template_cli.cli.commands;
+package mezlogo.gitsync.cli.commands;
 
-import mezlogo.template_cli.api.GreetService;
+import mezlogo.gitsync.core.GreetService;
 import picocli.CommandLine;
 
 import java.util.concurrent.Callable;
