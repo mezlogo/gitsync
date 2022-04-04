@@ -1,11 +1,11 @@
 package mezlogo.gitsync.cli;
 
-import mezlogo.gitsync.cli.commands.GreetCommand;
+import mezlogo.gitsync.cli.commands.ReportCommand;
 import picocli.CommandLine;
 
 @CommandLine.Command(
         name = "gitsync",
-        subcommands = {CommandLine.HelpCommand.class, GreetCommand.class},
+        subcommands = {CommandLine.HelpCommand.class, ReportCommand.class},
         mixinStandardHelpOptions = true
 )
 public class MainCommand {
